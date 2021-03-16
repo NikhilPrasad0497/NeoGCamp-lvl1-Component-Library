@@ -1,0 +1,136 @@
+/* BODY */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.grid{
+    display: grid;
+    /* grid-column: 1fr 1fr 1fr; */
+    grid-template-rows: auto;
+    /* grid-template-areas: 
+    "nav-div nav-div nav-div"
+    "section-1 . section-2"
+    "section-1-1 section-1-1 section-1-1"; */
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+}
+
+/* NAV */
+.nav-div{
+    /* grid-area: nav-div; */
+    height: 25vh;
+    align-self: center;
+    background-color: black;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav> .nav-2{
+    padding-right: 1rem;
+}
+
+.nav-div-heading{
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+.nav-div-heading > small{
+    font-size: small;
+    color: gray;
+}
+
+.link{
+    margin: 1rem;
+    color: grey;
+}
+
+.link:hover{
+    color: white ;
+}
+
+.icon{
+    height: 8px;
+    margin: 0.3rem;
+    width: auto;
+    color: white;
+}
+
+/* SECTIONS */
+.main-div-1{
+    /* display: inline; */
+    /* flex-wrap: wrap; */
+}
+.section-1{
+    /* flex-grow: 1; */
+    grid-area: section-1;
+    margin: 1rem 0rem 1rem 1rem;
+    width: 100%;
+}
+.section-1 > img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.section-2{
+    flex-grow: 1;
+    margin: 1rem;
+    grid-area: section-2;
+    justify-self: center;
+    width: 100%;
+}
+.section-2 > .section-2-div{
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.heading{
+    margin: 3rem;
+    font-size: larger;
+    text-align: center;
+}
+
+.paragraph{
+    position: relative;
+}
+
+.blog-post-icon{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-areas: 
+    'blog-post-img author-name'
+    'blog-post-img date';
+    grid-gap: 5px;
+    grid-template-rows: 20px;
+    justify-items: start;
+}
+
+.blog-post-img{
+    height: 50px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-name{
+    /* font-size: 20px; */
+}
+
+.date{
+    font-size: 14px;
+}
+
+.main-div-2{
+    /* display: flex; */
+}
+
+.section-1-1{
+    grid-area: section-1-1;
+}
